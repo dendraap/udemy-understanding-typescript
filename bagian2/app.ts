@@ -1,4 +1,5 @@
-const count = (n1: number, n2: number) => {
+const count = (n1: number, n2: number): number => {
+    if(typeof n1 !== 'number' || typeof n2 !== 'number') throw new Error('Incorrect input data types!')
     return n1+n2
 }
 
