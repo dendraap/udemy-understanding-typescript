@@ -6,6 +6,11 @@ const consoleDisplay = (input: number): void => {
     console.log("🚀 ~ consoleDisplay ~ input:", input)
 }
 
+const calculateAndHandle = (n1: number, n2: number, cb: (num: number) => void ) => {
+    const result = n1 + n2
+    cb(result)
+}
+
 // Function as type menggunakan Function klasik
 // variable functionAsType1 bisa menggunakan semua Function karena tidak ada ketentuan
 let functionAsType1: Function;
@@ -41,4 +46,14 @@ console.log("🚀 ~ functionAsType1:", functionAsType1(2,3))
 console.log('-------------')
 
 console.log("🚀 ~ functionAsType2:", functionAsType2(4,10))
+console.log('-------------')
+
+calculateAndHandle(10,20, (result) => {
+    console.log("🚀 ~ calculateAndHandle ~ result:", result)
+})
+console.log('-------------')
+
+// menghasilkan undifined, karena fungsi calculateAndHandle memiliki callback void, tidak mengembalikan nilai asli
+const resultCB = calculateAndHandle(12,23, (result) => {})
+console.log("🚀 ~ resultCB:", resultCB)
 console.log('-------------')

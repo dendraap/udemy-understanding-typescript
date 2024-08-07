@@ -4,6 +4,10 @@ var calculate = function (n1, n2) {
 var consoleDisplay = function (input) {
     console.log("🚀 ~ consoleDisplay ~ input:", input);
 };
+var calculateAndHandle = function (n1, n2, cb) {
+    var result = n1 + n2;
+    cb(result);
+};
 // Function as type menggunakan Function klasik
 // variable functionAsType1 bisa menggunakan semua Function karena tidak ada ketentuan
 var functionAsType1;
@@ -31,4 +35,12 @@ console.log('-------------');
 console.log("🚀 ~ functionAsType1:", functionAsType1(2, 3));
 console.log('-------------');
 console.log("🚀 ~ functionAsType2:", functionAsType2(4, 10));
+console.log('-------------');
+calculateAndHandle(10, 20, function (result) {
+    console.log("🚀 ~ calculateAndHandle ~ result:", result);
+});
+console.log('-------------');
+// menghasilkan undifined, karena fungsi calculateAndHandle memiliki callback void, tidak mengembalikan nilai asli
+var resultCB = calculateAndHandle(12, 23, function (result) { });
+console.log("🚀 ~ resultCB:", resultCB);
 console.log('-------------');
