@@ -6,8 +6,12 @@ var person = {
         street: 'Jl. Kepodang',
         postalcode: 59185
     },
-    hobbies: ['Gaming', 'Badminton']
+    hobbies: ['Gaming', 'Badminton'],
+    role: [2, 'AUTHOR']
 };
+// person.role.push('ADMIN')
+// person.role[1] = 10
+console.log("🚀 ~ person.role:", person.role);
 var favoriteActivites;
 favoriteActivites = ['Gaming', 'Sleep'];
 console.log("🚀 ~ favoriteActivites:", favoriteActivites);
