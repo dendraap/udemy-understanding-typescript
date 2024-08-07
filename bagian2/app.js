@@ -5,7 +5,13 @@ var person = {
         city: 'Juwana',
         street: 'Jl. Kepodang',
         postalcode: 59185
-    }
+    },
+    hobbies: ['Gaming', 'Badminton']
 };
-console.log("🚀 ~ person.name:", person.name);
-console.log("🚀 ~ person.address.city:", person.address.city);
+var favoriteActivites;
+favoriteActivites = ['Gaming', 'Sleep'];
+console.log("🚀 ~ favoriteActivites:", favoriteActivites);
+for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
+    var hobby = _a[_i];
+    console.log("🚀 ~ person.hobbies.map:", hobby.toUpperCase());
+}

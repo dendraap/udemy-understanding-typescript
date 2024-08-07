@@ -1,20 +1,19 @@
-const person: {
-    name: string;
-    age: number;
-    address: {
-        city: string;
-        street: string;
-        postalcode: number;
-    };
-} = {
+const person = {
     name: 'Dana',
     age: 21,
     address: {
         city: 'Juwana',
         street: 'Jl. Kepodang',
         postalcode: 59185
-    }
+    },
+    hobbies: ['Gaming', 'Badminton']
 }
 
-console.log("🚀 ~ person.name:", person.name)
-console.log("🚀 ~ person.address.city:", person.address.city)
+let favoriteActivites: string[];
+favoriteActivites = ['Gaming', 'Sleep']
+console.log("🚀 ~ favoriteActivites:", favoriteActivites)
+
+for (const hobby of person.hobbies) {
+    console.log("🚀 ~ person.hobbies.map:", hobby.toUpperCase())
+}
+
