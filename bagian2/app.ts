@@ -1,14 +1,6 @@
-const person: {
-    name: string;
-    age: number;
-    address: {
-        city: string;
-        street: string;
-        postalcode: number
-    };
-    hobbies: string[];
-    role: [number, string];
-} = {
+enum Role { ADMIN, READ_ONLY, AUTHOR} 
+
+const person = {
     name: 'Dana',
     age: 21,
     address: {
@@ -17,11 +9,9 @@ const person: {
         postalcode: 59185
     },
     hobbies: ['Gaming', 'Badminton'],
-    role: [2, 'AUTHOR']
+    role: Role.ADMIN
 }
 
-// person.role.push('ADMIN')
-// person.role[1] = 10
 console.log("🚀 ~ person.role:", person.role)
 
 let favoriteActivites: string[];
@@ -31,4 +21,8 @@ console.log("🚀 ~ favoriteActivites:", favoriteActivites)
 for (const hobby of person.hobbies) {
     console.log("🚀 ~ person.hobbies.map:", hobby.toUpperCase())
 }
+
+person.role === Role.ADMIN
+    ? console.log('This user is ADMIN')
+    : console.log('This user isn\'t ADMIN')
 
