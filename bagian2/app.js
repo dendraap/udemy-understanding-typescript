@@ -19,6 +19,12 @@ console.log("🚀 ~ person.role:", person.role);
 var favoriteActivites;
 favoriteActivites = ['Gaming', 'Sleep'];
 console.log("🚀 ~ favoriteActivites:", favoriteActivites);
+console.log("🚀 ~ typeof favoriteActivites:", typeof favoriteActivites);
+// Example for "ANY" data types
+var random;
+random = [1, 2, 'Dana', '123Dana'];
+console.log("🚀 ~ random:", random);
+console.log("🚀 ~ typeof random:", typeof random);
 for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
     var hobby = _a[_i];
     console.log("🚀 ~ person.hobbies.map:", hobby.toUpperCase());

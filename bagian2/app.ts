@@ -14,9 +14,16 @@ const person = {
 
 console.log("🚀 ~ person.role:", person.role)
 
-let favoriteActivites: string[];
+let favoriteActivites: string[]
 favoriteActivites = ['Gaming', 'Sleep']
 console.log("🚀 ~ favoriteActivites:", favoriteActivites)
+console.log("🚀 ~ typeof favoriteActivites:", typeof favoriteActivites)
+
+// Example for "ANY" data types
+let random: any[]
+random = [1, 2, 'Dana', '123Dana']
+console.log("🚀 ~ random:", random)
+console.log("🚀 ~ typeof random:", typeof random)
 
 for (const hobby of person.hobbies) {
     console.log("🚀 ~ person.hobbies.map:", hobby.toUpperCase())
