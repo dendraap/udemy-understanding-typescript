@@ -25,3 +25,7 @@ if (typeof unknownData === 'string') {
 //     console.log("🚀 ~ typeof makanan:", typeof makanan),
 //     console.log('..........')
 // )
+var errorHandling = function (message, code) {
+    throw { message: message, errorCode: code };
+};
+errorHandling('Page Not Found', 404);
