@@ -31,6 +31,7 @@ if (typeof unknownData === 'string') {
 // )
 
 
+// tipe fungsi function tidak akan mengeksekusi lanjutan dari kodingan selanjutnya. Cocok untuk errorHandling dan infinite loop
 const errorHandling = (message: string, code: number): never => {
     throw { message: message, errorCode: code }
 }

@@ -25,6 +25,7 @@ if (typeof unknownData === 'string') {
 //     console.log("🚀 ~ typeof makanan:", typeof makanan),
 //     console.log('..........')
 // )
+// tipe fungsi function tidak akan mengeksekusi lanjutan dari kodingan selanjutnya. Cocok untuk errorHandling dan infinite loop
 var errorHandling = function (message, code) {
     throw { message: message, errorCode: code };
 };
