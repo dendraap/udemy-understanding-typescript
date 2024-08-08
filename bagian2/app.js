@@ -1,46 +1,27 @@
-var calculate = function (n1, n2) {
-    return n1 + n2;
-};
-var consoleDisplay = function (input) {
-    console.log("🚀 ~ consoleDisplay ~ input:", input);
-};
-var calculateAndHandle = function (n1, n2, cb) {
-    var result = n1 + n2;
-    cb(result);
-};
-// Function as type menggunakan Function klasik
-// variable functionAsType1 bisa menggunakan semua Function karena tidak ada ketentuan
-var functionAsType1;
-functionAsType1 = calculate;
-// Function as type menggunakan Function Expression
-// variable ini hanya mengizinkan fungsi yang sesuai dengan deklarasinya, dengan 2 params number, dan output number
-var functionAsType2;
-functionAsType2 = calculate;
-// hasil akhir hanya console log saja, tidak undifined
-consoleDisplay(calculate(12, 23));
-console.log('-------------');
-// bernilai undifined karena fungsi consoleDisplay hanya void saja, tidak ada nilai nyata
-console.log("🚀 ~ console.log(consoleDisplay):", consoleDisplay(calculate(14, 23)));
-console.log('-------------');
-// karena tidak mencantumkan parameter, maka hanya menampilkan isi classnya
-console.log("🚀 ~ consoleDisplay:", consoleDisplay);
-console.log('-------------');
-// hasil akhir akan undifined, karena fungsi consoleDisplay tidak bernilai
-console.log("🚀 ~ consoleDisplay(234):", consoleDisplay(234));
-console.log('-------------');
-// hasil akhir akan undifined, karena fungsi consoleDisplay tidak mereturn
-var result = consoleDisplay(calculate(12, 23));
-console.log("🚀 ~ result:", result);
-console.log('-------------');
-console.log("🚀 ~ functionAsType1:", functionAsType1(2, 3));
-console.log('-------------');
-console.log("🚀 ~ functionAsType2:", functionAsType2(4, 10));
-console.log('-------------');
-calculateAndHandle(10, 20, function (result) {
-    console.log("🚀 ~ calculateAndHandle ~ result:", result);
-});
-console.log('-------------');
-// menghasilkan undifined, karena fungsi calculateAndHandle memiliki callback void, tidak mengembalikan nilai asli
-var resultCB = calculateAndHandle(12, 23, function (result) { });
-console.log("🚀 ~ resultCB:", resultCB);
-console.log('-------------');
+var unknownData;
+var makanan;
+unknownData = 2;
+unknownData = 'Nasi Padang';
+// metode if else sederhana menjadi metode yang best practice
+if (typeof unknownData === 'string') {
+    makanan = unknownData;
+    console.log("🚀 ~ makanan:", makanan);
+    console.log("🚀 ~ typeof makanan:", typeof makanan);
+    console.log('..........');
+}
+// menggunakan metode ternary, penggunaan jangka panjang kurang disarankan
+// typeof unknownData === 'string' 
+//     ? (
+//         makanan = unknownData,
+//         console.log("🚀 ~ makanan:", makanan),
+//         console.log("🚀 ~ typeof makanan:", typeof makanan),
+//         console.log('..........')
+//     )
+//     : null
+// menggunakan metode short-circuiting, tidak termasuk best practice
+// typeof unknownData === 'string' && (
+//     makanan = unknownData,
+//     console.log("🚀 ~ makanan:", makanan),
+//     console.log("🚀 ~ typeof makanan:", typeof makanan),
+//     console.log('..........')
+// )
