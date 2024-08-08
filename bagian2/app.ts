@@ -15,24 +15,24 @@ if (typeof unknownData === 'string') {
 // menggunakan metode ternary, penggunaan jangka panjang kurang disarankan
 // typeof unknownData === 'string' 
 //     ? (
-    //         makanan = unknownData,
-    //         console.log("🚀 ~ makanan:", makanan),
-    //         console.log("🚀 ~ typeof makanan:", typeof makanan),
-    //         console.log('..........')
-    //     )
-    //     : null
-    
-    // menggunakan metode short-circuiting, tidak termasuk best practice
-    // typeof unknownData === 'string' && (
-        //     makanan = unknownData,
-        //     console.log("🚀 ~ makanan:", makanan),
-        //     console.log("🚀 ~ typeof makanan:", typeof makanan),
-        //     console.log('..........')
-        // )
-        
-        
-        const errorHandling = (message: string, code: number): never => {
-            throw {message: message, errorCode: code}
-        }
-        
-        errorHandling('Page Not Found', 404)
+//         makanan = unknownData,
+//         console.log("🚀 ~ makanan:", makanan),
+//         console.log("🚀 ~ typeof makanan:", typeof makanan),
+//         console.log('..........')
+//     )
+//     : null
+
+// menggunakan metode short-circuiting, tidak termasuk best practice
+// typeof unknownData === 'string' && (
+//     makanan = unknownData,
+//     console.log("🚀 ~ makanan:", makanan),
+//     console.log("🚀 ~ typeof makanan:", typeof makanan),
+//     console.log('..........')
+// )
+
+
+const errorHandling = (message: string, code: number): never => {
+    throw { message: message, errorCode: code }
+}
+
+errorHandling('Page Not Found', 404)
