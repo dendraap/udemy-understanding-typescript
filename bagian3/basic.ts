@@ -5,4 +5,5 @@ const address: string = "me"
 let street: number
 street = 230
 const phone: number = age+street
+console.log("🚀 ~ phone:", phone)
 console.log("🚀 ~ age:", age)
