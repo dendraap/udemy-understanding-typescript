@@ -1,4 +1,4 @@
-console.log('Basic.ts')
+console.log('This is Basic.ts')
 let age: number
 age = 20
 const address: string = "me"
