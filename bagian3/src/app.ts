@@ -1,12 +1,11 @@
 const btn1 = document.querySelector('button')!
 
+// function click handler
 const clicked = (message: string) => {
-    console.log(message)
-}
-
-const button = (message: string): string => {
-    console.log(message)
-    return message
+    let n1 = 0
+    n1 = 2
+    console.log(n1)
+    console.log("Clicked!",message)
 }
 // do something when clicked
 if (btn1) {

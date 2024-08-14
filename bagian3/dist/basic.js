@@ -8,3 +8,4 @@ street = 230;
 const phone = age + street;
 console.log("🚀 ~ phone:", phone);
 console.log("🚀 ~ age:", age);
+//# sourceMappingURL=basic.js.map
