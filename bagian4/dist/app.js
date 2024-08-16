@@ -9,11 +9,11 @@ if (age > 0) {
 }
 middleName = "A";
 console.log("🚀 ~ middleName:", middleName);
-age = 50;
-if (age === 50) {
-    let lastName = 'Putra';
-    lastName = 'Put';
+const ab = (a, b) => a + b;
+const printOutput1 = output => console.log(output);
+const printOutput2 = (output) => console.log(output);
+const btn = document.querySelector('button');
+if (btn) {
+    btn.addEventListener('click', event => console.log("🚀 ~ event:", event));
 }
-lastName = 'P';
-console.log("🚀 ~ lastName:", lastName);
 //# sourceMappingURL=app.js.map
